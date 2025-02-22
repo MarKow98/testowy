@@ -7,7 +7,7 @@ import os
 sheet_id = "1jnf8qWCOZ8cIHEgIXHs93s64APoiPmsiAV_1MQJe-Pg"
 url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/export?format=csv"
 
-@st.cache_data
+
 def load_data():
     return pd.read_csv(url)
 
