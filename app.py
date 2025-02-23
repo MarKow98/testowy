@@ -3,17 +3,7 @@ import streamlit as st
 from PIL import Image
 import os
 
-st.markdown(
-    """
-    <link href="https://fonts.googleapis.com/css2?family=Sen&display=swap" rel="stylesheet">
-    <style>
-    body {
-        font-family: 'Sen', sans-serif;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
+
 
 # ID Twojego arkusza Google Sheets
 sheet_id = "1jnf8qWCOZ8cIHEgIXHs93s64APoiPmsiAV_1MQJe-Pg"
