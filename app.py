@@ -3,7 +3,16 @@ import streamlit as st
 from PIL import Image
 import os
 
-
+st.markdown(
+    """
+    <style>
+    .stApp {
+        background-color: rgb(138, 167, 228);
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 # ID Twojego arkusza Google Sheets
 sheet_id = "1jnf8qWCOZ8cIHEgIXHs93s64APoiPmsiAV_1MQJe-Pg"
