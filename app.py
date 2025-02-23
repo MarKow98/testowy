@@ -32,7 +32,7 @@ df['Nazwisko i Imię'] = df['Nazwisko'] + " " + df['Imię']
 
 # Wybór użytkownika
 names = [""] + df['Nazwisko i Imię'].tolist()
-full_name = st.selectbox("Wybierz osobę z listy:", df['Nazwisko i Imię'])
+full_name = st.selectbox("Wybierz osobę z listy:", names)
 
 # Wpisywanie hasła
 password = st.text_input("Wpisz swoje hasło:", type="password")
