@@ -3,10 +3,7 @@ import streamlit as st
 from PIL import Image
 import os
 
-st.markdown(
-    '<h1 style="background-color: rgb(138,167,228); padding: 10px;">Sprawdź swój urlop</h1>',
-    unsafe_allow_html=True
-)
+
 
 # ID Twojego arkusza Google Sheets
 sheet_id = "1jnf8qWCOZ8cIHEgIXHs93s64APoiPmsiAV_1MQJe-Pg"
@@ -19,7 +16,10 @@ def load_data():
 df = load_data()
 
 
-st.title("Sprawdź swój urlop")
+st.markdown(
+    '<h1 style="background-color: rgb(138,167,228); padding: 10px;">Sprawdź swój urlop</h1>',
+    unsafe_allow_html=True
+)
 
 image_url = "https://d3npyywa6qnolf.cloudfront.net/prod/user/823265/eyJ1cmwiOiJodHRwczpcL1wvcGF0cm9uaXRlLnBsXC91cGxvYWRcL3VzZXJcLzgyMzI2NVwvYXZhdGFyX29yaWcuanBnPzE2OTIyNzU2NDciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjI5MCwib3B0aW9ucyI6eyJxdWFsaXR5Ijo5NX19LCJ0b0Zvcm1hdCI6ImpwZWcifX0%3D/Eu%2Fq%2FhM1o8HfA32iLnH6uBNYVnn1hI1idKxeyZDdcRY%3D"  # Podmień na rzeczywisty URL obrazka
 st.markdown(
