@@ -3,16 +3,6 @@ import streamlit as st
 from PIL import Image
 import os
 
-# ID Twojego arkusza Google Sheets
-sheet_id = "1jnf8qWCOZ8cIHEgIXHs93s64APoiPmsiAV_1MQJe-Pg"
-url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/export?format=csv"
-
-
-def load_data():
-    return pd.read_csv(url)
-
-df = load_data()
-
 st.markdown(
     """
     <link href="https://fonts.googleapis.com/css2?family=Sen&display=swap" rel="stylesheet">
@@ -24,6 +14,17 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+
+# ID Twojego arkusza Google Sheets
+sheet_id = "1jnf8qWCOZ8cIHEgIXHs93s64APoiPmsiAV_1MQJe-Pg"
+url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/export?format=csv"
+
+
+def load_data():
+    return pd.read_csv(url)
+
+df = load_data()
+
 
 st.title("Sprawdź swój urlop")
 
