@@ -27,6 +27,9 @@ st.markdown(
 # Łączenie kolumn Imię i Nazwisko
 df['Nazwisko i Imię'] = df['Nazwisko'] + " " + df['Imię']
 
+names = [""] + df['Nazwisko i Imię'].tolist()
+full_name = st.selectbox("Wybierz osobę z listy:", names)
+
 # Wybór użytkownika
 full_name = st.selectbox("Wybierz osobę z listy:", df['Nazwisko i Imię'])
 
