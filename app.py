@@ -4,13 +4,7 @@ from PIL import Image
 import os
 
 st.markdown(
-    """
-    <style>
-    .stApp {
-        background-color: rgb(138, 167, 228);
-    }
-    </style>
-    """,
+    '<h1 style="background-color: rgb(138,167,228); padding: 10px;">Sprawdź swój urlop</h1>',
     unsafe_allow_html=True
 )
 
