@@ -13,11 +13,23 @@ def load_data():
 
 df = load_data()
 
+st.markdown(
+    """
+    <link href="https://fonts.googleapis.com/css2?family=Sen&display=swap" rel="stylesheet">
+    <style>
+    body {
+        font-family: 'Sen', sans-serif;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 st.title("Sprawdź swój urlop")
 
 image_url = "https://d3npyywa6qnolf.cloudfront.net/prod/user/823265/eyJ1cmwiOiJodHRwczpcL1wvcGF0cm9uaXRlLnBsXC91cGxvYWRcL3VzZXJcLzgyMzI2NVwvYXZhdGFyX29yaWcuanBnPzE2OTIyNzU2NDciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjI5MCwib3B0aW9ucyI6eyJxdWFsaXR5Ijo5NX19LCJ0b0Zvcm1hdCI6ImpwZWcifX0%3D/Eu%2Fq%2FhM1o8HfA32iLnH6uBNYVnn1hI1idKxeyZDdcRY%3D"  # Podmień na rzeczywisty URL obrazka
 st.markdown(
-    f'<img src="{image_url}" width="300">',
+    f'<div align="center"><img src="{image_url}" width="300"></div>',
     unsafe_allow_html=True
 )
 
