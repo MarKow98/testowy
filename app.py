@@ -18,22 +18,22 @@ st.title("Sprawdź swój urlop")
 
 
 # Łączenie kolumn Imię i Nazwisko
-df['Imię i Nazwisko'] = df['Imię'] + " " + df['Nazwisko']
+df['Nazwisko i Imię'] = df['Nazwisko'] + " " + df['Imię']
 
 # Wybór użytkownika
-full_name = st.selectbox("Wybierz swoje imię i nazwisko:", df['Imię i Nazwisko'])
+full_name = st.selectbox("Wybierz osobę z listy:", df['Nazwisko i Imię'])
 
 # Wpisywanie hasła
 password = st.text_input("Wpisz swoje hasło:", type="password")
 
 # Przycisk sprawdzający dane
 if st.button("Sprawdź urlop"):
-    user = df[df['Imię i Nazwisko'] == full_name]
+    user = df[df['Nazwisko i Imię'] == full_name]
 
     if user.empty:
         st.error("Nie znaleziono użytkownika!")
     elif user['Hasło'].values[0] == password:
         vacation_days = user['Dni urlopowe'].values[0]
-        st.success(f"Pozostało dni urlopowe: {vacation_days}")
+        st.success(f"Pozostało dni urlopowych: {vacation_days}")
     else:
         st.error("Niepoprawne hasło!")
